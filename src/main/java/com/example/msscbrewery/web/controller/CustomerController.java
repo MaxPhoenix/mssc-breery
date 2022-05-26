@@ -32,7 +32,7 @@ public class CustomerController {
         CustomerDTO createdCustomerDTO = customerService.save(customerDTO);
 
         HttpHeaders httpHeaders = new HttpHeaders();
-        httpHeaders.add("Location" , "/api/v1/beer/" + createdCustomerDTO.getId().toString());
+        httpHeaders.add("Location" , "/api/v1/customer/" + createdCustomerDTO.getId().toString());
 
         return ResponseEntity.status(HttpStatus.CREATED)
                 .headers(httpHeaders)
